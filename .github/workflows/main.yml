@@ -58,3 +58,39 @@ jobs:
       run: rebar3 covertool generate
     - name: Upload coverage to Codecov
       run: bash <(curl -s https://codecov.io/bash) -f _build/test/covertool/imap_utf7.covertool.xml
+
+
+  macos:
+    name: Build (${{ matrix.os }})
+    runs-on: ${{ matrix.os }}
+    defaults:
+      run:
+        shell: bash
+
+    strategy:
+      matrix:
+        os: [macos-latest]
+
+    steps:
+    - name: Checkout
+      uses: actions/checkout@v2
+    - name: Extract branch name
+      run: echo "##[set-output name=branch;]$(echo ${GITHUB_REF#refs/heads/})"
+      id: extract_branch
+    - name: Install Erlang
+      run: brew install erlang
+    - name: Install rebar3
+      run: brew install rebar3
+    - name: Cache Hex packages
+      uses: actions/cache@v2
+      with:
+        path: ~/.cache/rebar3/hex/hexpm/packages
+        key: ${{ runner.os }}-${{ steps.extract_branch.outputs.branch }}-hex-${{ hashFiles(format('{0}{1}', github.workspace, '/rebar.lock')) }}
+        restore-keys: |
+          ${{ runner.os }}-${{ steps.extract_branch.outputs.branch }}-hex-
+    - name: Compile
+      run: rebar3 compile
+    - name: CT tests
+      run: rebar3 ct
+    - name: Code coverage
+      run: rebar3 cover
