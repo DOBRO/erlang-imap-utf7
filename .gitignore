@@ -15,3 +15,7 @@ deps
 .rebar3
 _build/
 _checkouts/
+
+# other
+.vscode
+.DS_Store
