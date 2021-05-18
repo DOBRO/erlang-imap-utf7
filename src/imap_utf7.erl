@@ -39,7 +39,7 @@ encode(Bin) when is_binary(Bin)->
 -spec decode(binary()) -> binary().
 decode(<<>>) ->
     <<>>;
-decode(Bin) ->
+decode(Bin) when is_binary(Bin) ->
     decode(Bin, <<>>, <<>>).
 
 
