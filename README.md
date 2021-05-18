@@ -52,3 +52,12 @@ true
 > imap_utf7:decode(<<"Inbox">>).
 <<"Inbox">>
 ```
+
+## Building and testing
+
+```bash
+$ rebar3 compile
+$ rebar3 dialyzer
+$ rebar3 ct
+$ rebar3 cover
+```
