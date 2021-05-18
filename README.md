@@ -1,13 +1,11 @@
 # imap_utf7
 
-IMAP UTF-7 encoding/decoding library for Erlang.
+The library provides functions for encoding/decoding Erlang UTF-8 binaries to and from modified UTF-7 encoding
+in accordance with RFC 3501.
 
 From RFC 3501, section 5.1.3. "[Mailbox International Naming Convention](https://datatracker.ietf.org/doc/html/rfc3501#section-5.1.3)":
 > By convention, international mailbox names in IMAP4rev1 are specified
 > using a modified version of the UTF-7 encoding described in [UTF-7].
-
-This library provides functions for encoding/decoding Erlang UTF-8 binaries to and from modified UTF-7 encoding
-in accordance with RFC 3501.
 
 ## Examples
 
