@@ -56,6 +56,7 @@ true
 ## Building and testing
 
 ```bash
+# using rebar3:
 $ rebar3 compile
 $ rebar3 dialyzer
 $ rebar3 ct
