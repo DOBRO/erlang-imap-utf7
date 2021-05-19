@@ -11,6 +11,30 @@ From RFC 3501, section 5.1.3. "[Mailbox International Naming Convention](https:/
 > By convention, international mailbox names in IMAP4rev1 are specified
 > using a modified version of the UTF-7 encoding described in [UTF-7].
 
+## Functions
+
+### Encoding
+
+```erlang
+imap_utf7:encode(MailboxName) -> MailboxNameEncoded
+  when
+    MailboxName         :: binary(),
+    MailboxNameEncoded  :: binary().
+```
+
+Encodes UTF-8 `MailboxName` and returns `MailboxNameEncoded` in a modified UTF-7 encoding.
+
+### Decoding
+
+```erlang
+imap_utf7:decode(MailboxNameEncoded) -> MailboxName
+  when
+    MailboxNameEncoded  :: binary(),
+    MailboxName         :: binary().
+```
+
+Decodes UTF-7 `MailboxNameEncoded` end returns `MailboxName` in UTF-8 encoding.
+
 ## Examples
 
 Encoding:
