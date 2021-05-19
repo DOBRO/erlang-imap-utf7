@@ -1,6 +1,6 @@
 # imap_utf7
 
-[![CI Status](https://github.com/DOBRO/binbo/workflows/Build/badge.svg?branch=master)](https://github.com/DOBRO/binbo/actions?query=workflow%3ABuild+branch%3Amaster)
+[![CI Status](https://github.com/DOBRO/erlang-imap-utf7/workflows/Build/badge.svg?branch=master)](https://github.com/DOBRO/erlang-imap-utf7/actions?query=workflow%3ABuild+branch%3Amaster)
 [![Code coverage](https://codecov.io/gh/DOBRO/erlang-imap-utf7/branch/master/graph/badge.svg)](https://codecov.io/gh/DOBRO/erlang-imap-utf7)
 ![License](https://img.shields.io/badge/license-Apache%202.0-blue.svg)
 
