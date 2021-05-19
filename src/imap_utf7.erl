@@ -29,14 +29,20 @@
 %%%------------------------------------------------------------------------------
 
 %% encode/1
--spec encode(binary()) -> binary().
+-spec encode(MailboxName :: binary()) -> MailboxNameEncoded :: binary().
+%% @doc
+%% Encodes UTF-8 `MailboxName' and returns `MailboxNameEncoded' in a modified UTF-7 encoding.
+%% @end
 encode(<<>>) ->
     <<>>;
 encode(Bin) when is_binary(Bin)->
     encode(Bin, <<>>, <<>>).
 
 %% decode/1
--spec decode(binary()) -> binary().
+-spec decode(MailboxNameEncoded :: binary()) -> MailboxName :: binary().
+%% @doc
+%% Decodes UTF-7 `MailboxNameEncoded' end returns `MailboxName' in UTF-8 encoding.
+%% @end
 decode(<<>>) ->
     <<>>;
 decode(Bin) when is_binary(Bin) ->

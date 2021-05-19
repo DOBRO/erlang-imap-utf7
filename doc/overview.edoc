@@ -1,0 +1,9 @@
+** this is the overview.doc file for the application 'Binbo' **
+
+@author Sergei Semichev <chessvegas@chessvegas.com>
+@copyright 2021 Sergei Semichev
+@title IMAP UTF-7 encoding/decoding library
+@reference See <a href="https://github.com/DOBRO/erlang-imap-utf7" target="_blank">imap_utf7 page on github</a> for more information and examples.
+
+@doc The library provides functions for encoding/decoding Erlang UTF-8 binaries to and from modified UTF-7 encoding
+in accordance with <a href="https://datatracker.ietf.org/doc/html/rfc3501#section-5.1.3" target="_blank">RFC 3501, section section 5.1.3.</a>

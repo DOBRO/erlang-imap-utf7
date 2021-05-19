@@ -16,6 +16,10 @@ deps
 _build/
 _checkouts/
 
+# docs
+doc/*
+!doc/overview.edoc
+
 # other
 .vscode
 .DS_Store
