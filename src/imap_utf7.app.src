@@ -1,6 +1,6 @@
 {application, imap_utf7, [
 	{description, "IMAP UTF-7 encoding/decoding library"},
-	{vsn, "0.1.0"},
+	{vsn, "1.0.0"},
 	{modules, [imap_utf7]},
 	{registered, []},
 	{applications, [kernel, stdlib]},
